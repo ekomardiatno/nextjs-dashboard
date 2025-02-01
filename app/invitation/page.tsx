@@ -126,8 +126,8 @@ export default function InvitationPage() {
                 <div className="w-36 h-36 md:w-48 md:h-48 rounded-full bg-slate-400"></div>
                 <div className='flex-1'>
                   <h3 className={sacramento.className + ' text-4xl font-bold mb-2 text-pink-600 text-left lg:text-right'}>Shandika Galih</h3>
-                  <p className='mb-2 text-gray-700 md:text-gray-400 text-left lg:text-right'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio eligendi iste, ducimus modi minus blanditiis voluptatum necessitatibus? Reiciendis nulla harum consectetur tempora nesciunt, vel nihil a, ipsum atque eos neque.</p>
-                  <p className='text-gray-700 md:text-gray-400 text-left lg:text-right'>Putra dari Bpk. Lorem dan Ibu Ipsum</p>
+                  <p className='mb-2 text-gray-700 dark:text-gray-200 text-left lg:text-right'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio eligendi iste, ducimus modi minus blanditiis voluptatum necessitatibus? Reiciendis nulla harum consectetur tempora nesciunt, vel nihil a, ipsum atque eos neque.</p>
+                  <p className='text-gray-700 dark:text-gray-200 text-left lg:text-right'>Putra dari Bpk. Lorem dan Ibu Ipsum</p>
                 </div>
               </div>
               <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-16 h-w-16 p-2 bg-white rounded-full hidden lg:block">
@@ -136,8 +136,8 @@ export default function InvitationPage() {
               <div className='flex gap-4 lg:flex-row-reverse'>
                 <div className='flex-1'>
                   <h3 className={sacramento.className + ' text-4xl font-bold mb-2 text-pink-600 text-right lg:text-left'}>Nofariza</h3>
-                  <p className='mb-2 text-gray-700 md:text-gray-400 text-right lg:text-left'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio eligendi iste, ducimus modi minus blanditiis voluptatum necessitatibus? Reiciendis nulla harum consectetur tempora nesciunt, vel nihil a, ipsum atque eos neque.</p>
-                  <p className='text-gray-700 md:text-gray-400 text-right lg:text-left'>Putra dari Bpk. Lorem dan Ibu Ipsum</p>
+                  <p className='mb-2 text-gray-700 dark:text-gray-200 text-right lg:text-left'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio eligendi iste, ducimus modi minus blanditiis voluptatum necessitatibus? Reiciendis nulla harum consectetur tempora nesciunt, vel nihil a, ipsum atque eos neque.</p>
+                  <p className='text-gray-700 dark:text-gray-200 text-right lg:text-left'>Putra dari Bpk. Lorem dan Ibu Ipsum</p>
                 </div>
                 <div className="w-36 h-36 md:w-48 md:h-48 rounded-full bg-slate-400"></div>
               </div>
