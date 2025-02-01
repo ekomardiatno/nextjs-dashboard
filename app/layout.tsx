@@ -17,9 +17,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const dark = true
   return (
-    <html lang="en" className={dark ? 'dark' : undefined}>
+    <html lang="en"> 
+    {/* className='dark' to activate dark mode selector */}
       <body className={`${inter.className} antialiased`}>
         <SessionWrapper>
           {children}
