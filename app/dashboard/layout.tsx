@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     }
   }, [status])
 
-  if(status === 'loading') return null
+  if(status !== 'authenticated') return null
 
   return (
     <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">

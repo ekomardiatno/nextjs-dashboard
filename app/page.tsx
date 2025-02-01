@@ -31,7 +31,9 @@ export default function Page() {
           <button
             onClick={() => {
               if (status === 'unauthenticated') {
-                signIn('credentials')
+                signIn('credentials', {
+                  callbackUrl: '/dashboard'
+                })
               } else if (status === 'authenticated') {
                 push('/dashboard')
               }
