@@ -17,11 +17,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const dark = true
   return (
-    <html lang="en">
+    <html lang="en" className={dark ? 'dark' : undefined}>
       <body className={`${inter.className} antialiased`}>
         <SessionWrapper>
-            {children}
+          {children}
         </SessionWrapper>
       </body>
     </html>
