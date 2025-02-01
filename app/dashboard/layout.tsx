@@ -1,6 +1,23 @@
+'use client'
+
+import { useSession } from "next-auth/react";
 import SideNav from "../ui/dashboard/sidenav";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+
+  const {data: session, status} = useSession()
+  const router = useRouter()
+
+  useEffect(() => {
+    if(status === 'unauthenticated') {
+      router.push('/login')
+    }
+  }, [status])
+
+  if(status === 'loading') return null
+
   return (
     <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
       <div className="w-full flex-none md:w-64">
