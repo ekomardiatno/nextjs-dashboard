@@ -53,7 +53,7 @@ export default function InvitationPage() {
             }
           </div>
         </div>
-        <button className="bg-pink-400 text-pink-800 px-4 py-2 hover:bg-pink-500 hover:text-pink-900 active:text-pink-950 rounded-xl active:bg-pink-600 transition active:scale-95 hover:text"><EnvelopeOpenIcon className='w-5 h-5 align-middle inline-block' /><span className='align-middle ml-2'>Lihat Undangan</span></button>
+        <a href='#invitation-home' className="bg-pink-400 text-pink-800 px-4 py-2 hover:bg-pink-500 hover:text-pink-900 active:text-pink-950 rounded-xl active:bg-pink-600 transition active:scale-95 hover:text"><EnvelopeOpenIcon className='w-5 h-5 align-middle inline-block' /><span className='align-middle ml-2'>Lihat Undangan</span></a>
       </section>
       <div className='relative'>
         <nav className="bg-pink-400 sticky top-0">
