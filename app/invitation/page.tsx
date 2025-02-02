@@ -38,7 +38,7 @@ export default function InvitationPage() {
       <section id='hero' className="hero h-screen flex flex-col items-center justify-center">
         <h4 className='dark:text-white text-lg mb-2'>Kepada Bapak/Ibu/Saudara/i,</h4>
         <h1 className={sacramento.className + ' dark:text-white text-5xl mb-2'}>Shandika & Nofariza</h1>
-        <div className="mb-5 text-center">
+        <div className="mb-10 text-center">
           <p className='dark:text-white mb-4'>Akan melangsungkan resepsi pernikahan dalam:</p>
           <div className="flex gap-2 justify-center">
             {
@@ -88,6 +88,38 @@ export default function InvitationPage() {
           </div>
         </nav>
 
+        <section id='invitation-home' className="min-h-screen flex flex-col justify-center -mt-16 pt-16">
+          <div className="mx-auto max-w-2xl px-2 sm:px-6 lg:px-8 mb-24 mt-10">
+            <h2 className={sacramento.className + ' text-pink-600 text-5xl text-center mb-3'}>Acara Pernikahan</h2>
+            <h3 className='text-lg text-center dark:text-white mb-2'>Diselenggarakan pada 5 Jan 2030 di Pekanbaru.</h3>
+            <p className='text-center dark:text-white'>Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu/Saudara/i, untuk hadir pada acara pernikahan kami.</p>
+          </div>
+
+          <div className="mx-auto w-full max-w-7xl px-2 sm:px-6 lg:px-8 relative mb-10">
+            <div className="flex gap-10 lg:gap-4 flex-col lg:flex-row">
+              <div className='flex flex-1 gap-4 lg:flex-row-reverse'>
+                <div className="w-36 h-36 md:w-48 md:h-48 rounded-full bg-slate-400"></div>
+                <div className='flex-1'>
+                  <h3 className={sacramento.className + ' text-4xl font-bold mb-2 text-pink-600 text-left lg:text-right'}>Shandika Galih</h3>
+                  <p className='mb-2 text-gray-700 dark:text-gray-200 text-left lg:text-right'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae soluta voluptate molestiae fugit nisi ut ducimus eveniet a quisquam sunt.</p>
+                  <p className='text-gray-700 dark:text-gray-200 text-left lg:text-right'>Putra dari Bpk. Lorem dan Ibu Ipsum</p>
+                </div>
+              </div>
+              <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-14 h-14 p-2 bg-white rounded-full hidden lg:block">
+                <HeartIcon className='text-pink-500' />
+              </div>
+              <div className='flex flex-1 gap-4 lg:flex-row-reverse'>
+                <div className='flex-1'>
+                  <h3 className={sacramento.className + ' text-4xl font-bold mb-2 text-pink-600 text-right lg:text-left'}>Nofariza</h3>
+                  <p className='mb-2 text-gray-700 dark:text-gray-200 text-right lg:text-left'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda dolorum, fugit sed magni suscipit non.</p>
+                  <p className='text-gray-700 dark:text-gray-200 text-right lg:text-left'>Putra dari Bpk. Lorem dan Ibu Ipsum</p>
+                </div>
+                <div className="w-36 h-36 md:w-48 md:h-48 rounded-full bg-slate-400"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {isOpen && (
           <div
@@ -100,7 +132,7 @@ export default function InvitationPage() {
           className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-slate-800 shadow-lg transform transition-transform duration-300 ease-in-out${!isOpen ? ' translate-x-full' : ' translate-x-0'}`}
         >
           <div className="p-4 flex justify-between items-center">
-            <p className={sacramento.className + ' text-3xl text-white'}>emvite</p>
+            <p className={sacramento.className + ' text-3xl text-pink-600 dark:text-white'}>emvite</p>
             <button onClick={() => setIsOpen(false)} className="text-xl dark:text-white">
               &times;
             </button>
@@ -112,38 +144,6 @@ export default function InvitationPage() {
             <li className="py-2 dark:text-white"><a href="#" className='text-center block'>Contact</a></li>
           </ul>
         </div>
-
-        <section id='invitation-home' className="min-h-screen flex flex-col justify-center -mt-16 pt-16">
-          <div className="mx-auto max-w-2xl px-2 sm:px-6 lg:px-8 mb-10 mt-10">
-            <h2 className={sacramento.className + ' text-pink-600 text-5xl text-center mb-3'}>Acara Pernikahan</h2>
-            <h3 className='text-lg text-center dark:text-white mb-2'>Diselenggarakan pada 5 Jan 2030 di Pekanbaru.</h3>
-            <p className='text-center dark:text-white'>Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu/Saudara/i, untuk hadir pada acara pernikahan kami.</p>
-          </div>
-
-          <div className="mx-auto w-full max-w-7xl px-2 sm:px-6 lg:px-8 relative mb-10">
-            <div className="flex gap-4 flex-col lg:flex-row">
-              <div className='flex gap-4 lg:flex-row-reverse'>
-                <div className="w-36 h-36 md:w-48 md:h-48 rounded-full bg-slate-400"></div>
-                <div className='flex-1'>
-                  <h3 className={sacramento.className + ' text-4xl font-bold mb-2 text-pink-600 text-left lg:text-right'}>Shandika Galih</h3>
-                  <p className='mb-2 text-gray-700 dark:text-gray-200 text-left lg:text-right'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio eligendi iste, ducimus modi minus blanditiis voluptatum necessitatibus? Reiciendis nulla harum consectetur tempora nesciunt, vel nihil a, ipsum atque eos neque.</p>
-                  <p className='text-gray-700 dark:text-gray-200 text-left lg:text-right'>Putra dari Bpk. Lorem dan Ibu Ipsum</p>
-                </div>
-              </div>
-              <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-16 h-w-16 p-2 bg-white rounded-full hidden lg:block">
-                <HeartIcon className='text-pink-500' />
-              </div>
-              <div className='flex gap-4 lg:flex-row-reverse'>
-                <div className='flex-1'>
-                  <h3 className={sacramento.className + ' text-4xl font-bold mb-2 text-pink-600 text-right lg:text-left'}>Nofariza</h3>
-                  <p className='mb-2 text-gray-700 dark:text-gray-200 text-right lg:text-left'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio eligendi iste, ducimus modi minus blanditiis voluptatum necessitatibus? Reiciendis nulla harum consectetur tempora nesciunt, vel nihil a, ipsum atque eos neque.</p>
-                  <p className='text-gray-700 dark:text-gray-200 text-right lg:text-left'>Putra dari Bpk. Lorem dan Ibu Ipsum</p>
-                </div>
-                <div className="w-36 h-36 md:w-48 md:h-48 rounded-full bg-slate-400"></div>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </main>
   )
