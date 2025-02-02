@@ -37,7 +37,7 @@ export default function InvitationPage() {
     <main className={workSans.className + " bg-slate-100 dark:bg-slate-800"}>
       <section id='hero' className="hero h-screen flex flex-col items-center justify-center">
         <h4 className='dark:text-white text-lg mb-2'>Kepada Bapak/Ibu/Saudara/i,</h4>
-        <h1 className={sacramento.className + ' dark:text-white text-5xl mb-2'}>Shandika & Nofariza</h1>
+        <h1 className={sacramento.className + ' text-pink-600 text-5xl mb-2'}>Shandika & Nofariza</h1>
         <div className="mb-10 text-center">
           <p className='dark:text-white mb-4'>Akan melangsungkan resepsi pernikahan dalam:</p>
           <div className="flex gap-2 justify-center">
