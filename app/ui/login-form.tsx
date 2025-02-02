@@ -23,7 +23,7 @@ export default function LoginForm() {
         password,
         callbackUrl
       })
-      if(res?.ok) {
+      if (res?.ok) {
         router.push(callbackUrl)
       } else {
         setErrorMessage('Invalid credentials')
@@ -80,7 +80,7 @@ export default function LoginForm() {
             </div>
           </div>
         </div>
-        <Button className="mt-4 w-full">
+        <Button type='submit' className="mt-4 w-full">
           Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
         </Button>
         <div
