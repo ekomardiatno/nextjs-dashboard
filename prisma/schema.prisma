@@ -1,0 +1,109 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(uuid())
+  firstName String
+  lastName  String
+  username  String     @unique
+  email     String     @unique
+  password  String
+  createdAt DateTime   @default(now())
+  createdBy String
+  userRoles UserRole[]
+  isActive  Boolean    @default(true)
+  isDelete  Boolean    @default(false)
+}
+
+model Product {
+  id                 String   @id @default(uuid())
+  productName        String
+  productKey         String
+  productUrl         String?
+  productIconImage   String?
+  productHeroImage   String?
+  productDescription String?
+  modules            Module[]
+  createdAt          DateTime @default(now())
+  createdBy          String
+  isActive           Boolean  @default(true)
+  isDelete           Boolean  @default(false)
+}
+
+model Module {
+  id                Int         @id @default(autoincrement())
+  moduleName        String
+  moduleKey         String      @unique @default(uuid())
+  moduleDescription String?
+  subModules        SubModule[]
+  product           Product     @relation(fields: [productId], references: [id])
+  productId         String
+  createdAt         DateTime    @default(now())
+  createdBy         String
+  isActive          Boolean     @default(true)
+  isDelete          Boolean     @default(false)
+}
+
+model SubModule {
+  id                   Int           @id @default(autoincrement())
+  subModuleName        String
+  subModuleKey         String        @unique @default(uuid())
+  subModuleDescription String?
+  module               Module        @relation(fields: [moduleId], references: [id])
+  moduleId             Int
+  roleAbilities        RoleAbility[]
+  createdAt            DateTime      @default(now())
+  createdBy            String
+  isActive             Boolean       @default(true)
+  isDelete             Boolean       @default(false)
+}
+
+model Role {
+  id              String        @id @default(uuid())
+  roleName        String
+  roleDescription String?
+  roleAbilities   RoleAbility[]
+  createdAt       DateTime      @default(now())
+  createdBy       String
+  isActive        Boolean       @default(true)
+  isDelete        Boolean       @default(false)
+}
+
+model RoleAbility {
+  id            Int        @id @default(autoincrement())
+  role          Role       @relation(fields: [roleId], references: [id])
+  roleId        String
+  subModule     SubModule  @relation(fields: [subModuleId], references: [id])
+  subModuleId   Int
+  readAbility   Boolean    @default(true)
+  writeAbility  Boolean    @default(false)
+  modifyAbility Boolean    @default(false)
+  deleteAbility Boolean    @default(false)
+  userRoles     UserRole[]
+  createdAt     DateTime   @default(now())
+  createdBy     String
+  isActive      Boolean    @default(true)
+  isDelete      Boolean    @default(false)
+}
+
+model UserRole {
+  id            Int         @id @default(autoincrement())
+  roleAbility   RoleAbility @relation(fields: [roleAbilityId], references: [id])
+  roleAbilityId Int
+  user          User        @relation(fields: [userId], references: [id])
+  userId        String
+  createdAt     DateTime    @default(now())
+  createdBy     String
+}
